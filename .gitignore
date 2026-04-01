@@ -1,0 +1,19 @@
+# python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# venv
+venv/
+.env/
+
+# data
+data/raw/*
+data/processed/*
+
+# system
+.DS_Store
+
+# logs
+*.log
