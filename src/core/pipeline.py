@@ -1,11 +1,6 @@
 from src.parser.ardupilot_parser import parse_log
+import pandas as pd
 
-def parse_log(file_path: str, use_mock=True) -> pd.DataFrame:
-    if use_mock:
-        return generate_mock()
-    else:
-        return real_parse(file_path)
-
-df = parse_log("fake.bin")
-print(df.head())
-print(df.shape)
+def run_pipeline(file_path: str) -> dict:
+    result = parse_log(file_path)
+    return result
