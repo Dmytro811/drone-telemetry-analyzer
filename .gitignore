@@ -8,10 +8,6 @@ __pycache__/
 venv/
 .env/
 
-# data
-data/raw/*
-data/processed/*
-
 # system
 .DS_Store
 
