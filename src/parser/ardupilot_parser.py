@@ -27,6 +27,8 @@ def parse_log(file_path: str) -> dict[str, pd.DataFrame]:
         d = msg.to_dict()
         
         if t == 'GPS':
+            if d.get('Status', 0) < 3:
+                continue
             gps_records.append({
                 'timestamp': d['TimeUS'] / 1e6,   
                 'lat':       d['Lat'],
